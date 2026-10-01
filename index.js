@@ -1,4 +1,3 @@
-```js
 const { spawn, execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
@@ -383,4 +382,3 @@ if (fs.existsSync(BIN_TUNNEL)) {
 // ============================================================
 
 setInterval(() => {}, 100000);
-```
