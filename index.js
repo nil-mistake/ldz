@@ -133,6 +133,17 @@ if (fs.existsSync(BIN_TUNNEL)) {
         console.log(`[UUID Sync] 生效 UUID: ${UUID}`);
         
         console.log('\n🚀【CF 隧道加密节点链接】:');
+        console.log('\n🌐【Bot-Hosting HTTPS 节点】');
+        console.log(
+        `vless://${UUID}@${PLATFORM_DOMAIN}:443` +
+        `?encryption=none` +
+        `&security=tls` +
+        `&sni=${PLATFORM_DOMAIN}` +
+        `&type=ws` +
+        `&host=${PLATFORM_DOMAIN}` +
+        `&path=%2Fvless-ws` +
+        `#Bot-Hosting-HTTPS`
+);
         console.log(`vless://${UUID}@${sub}:443?encryption=none&security=tls&sni=${sub}&type=ws&host=${sub}&path=%2Fvless-ws#CF-Tunnel`);
         
         console.log('\n⚡【原生 IP 直连节点链接】:');
