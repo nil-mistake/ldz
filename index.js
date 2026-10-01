@@ -53,6 +53,7 @@ try {
 
 // 4. 动态读取 UUID 并写入配置文件
 let UUID = '0febdf96-c364-4a8a-af2b-7707e102e31a';
+const PLATFORM_DOMAIN = '2rnynq2jvl.apps.bot-hosting.cloud';
 try {
   if (fs.existsSync(configPath)) {
     const configData = JSON.parse(fs.readFileSync(configPath, 'utf8'));
