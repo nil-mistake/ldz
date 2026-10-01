@@ -53,7 +53,6 @@ try {
 
 // 4. 动态读取 UUID 并写入配置文件
 let UUID = '0febdf96-c364-4a8a-af2b-7707e102e31a';
-const PLATFORM_DOMAIN = '2rnynq2jvl.apps.bot-hosting.cloud';
 try {
   if (fs.existsSync(configPath)) {
     const configData = JSON.parse(fs.readFileSync(configPath, 'utf8'));
@@ -134,17 +133,6 @@ if (fs.existsSync(BIN_TUNNEL)) {
         console.log(`[UUID Sync] 生效 UUID: ${UUID}`);
         
         console.log('\n🚀【CF 隧道加密节点链接】:');
-        console.log('\n🌐【Bot-Hosting HTTPS 节点】');
-        console.log(
-        `vless://${UUID}@${PLATFORM_DOMAIN}:443` +
-        `?encryption=none` +
-        `&security=tls` +
-        `&sni=${PLATFORM_DOMAIN}` +
-        `&type=ws` +
-        `&host=${PLATFORM_DOMAIN}` +
-        `&path=%2Fvless-ws` +
-        `#Bot-Hosting-HTTPS`
-);
         console.log(`vless://${UUID}@${sub}:443?encryption=none&security=tls&sni=${sub}&type=ws&host=${sub}&path=%2Fvless-ws#CF-Tunnel`);
         
         console.log('\n⚡【原生 IP 直连节点链接】:');
