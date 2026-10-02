@@ -29,6 +29,9 @@ const fetchPublicIP = () => {
 };
 
 IP = fetchPublicIP();
+console.log("===== START =====");
+console.log("PORT:", PORT);
+console.log("IP:", IP);
 
 // 2. 纯动态 PTR 反向解析：向 DNS 询问当前 IP 绑定的真实域名（零字典、零硬编码）
 async function getDynamicDomain(targetIp) {
